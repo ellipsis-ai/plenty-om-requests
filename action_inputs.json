@@ -29,13 +29,13 @@
   "isSavedForTeam" : false,
   "isSavedForUser" : false
 }, {
-  "exportId" : "bKPMUn1-Q7q_FhvZS0RUiw",
-  "name" : "description",
+  "exportId" : "diNCmHKAQDykIlNZ3TzQMQ",
+  "name" : "messageId",
   "paramType" : {
     "exportId" : "Text",
     "name" : "Text"
   },
-  "question" : "What's the request?",
+  "question" : "What is the value for `messageId`?",
   "isSavedForTeam" : false,
   "isSavedForUser" : false
 } ]

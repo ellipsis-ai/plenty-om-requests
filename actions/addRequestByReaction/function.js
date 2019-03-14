@@ -1,12 +1,14 @@
 function(ellipsis) {
   const checkContext = require('checkContext');
 
-if (checkContext(ellipsis)) {
+const msg = ellipsis.event.message;
+if (checkContext(ellipsis) && msg) {
   ellipsis.success("", {
     next: {
       actionName: "newRequest",
       args: [
-        { name: "description", value: ellipsis.event.message ? ellipsis.event.message.text }
+        { name: "description", value: msg.text },
+        { name: "messageId", value: msg.permalink || "" }
       ]
     }
   });
