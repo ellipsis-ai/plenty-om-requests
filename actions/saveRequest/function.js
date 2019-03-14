@@ -2,8 +2,11 @@ function(requestData, ellipsis) {
   const EllipsisApi = require('ellipsis-api');
 const actionsApi = new EllipsisApi(ellipsis).actions;
 const client = require('GoogleClient')(ellipsis);
-const {google} = require('googleapis');
-const sheets = google.sheets('v4');
+const {google} = ellipsis.require('googleapis@36.0.0');
+const sheets = google.sheets({
+  version: 'v4', 
+  auth: client
+});
 const Request = require("Request");
 const moment = require("moment-timezone");
 moment.tz.setDefault(ellipsis.teamInfo.timeZone);
@@ -33,7 +36,8 @@ client.authorize().then(() => {
       userMessage: SAVE_ERROR_MESSAGE
     });
   } else {
-    ellipsis.success(request.format());
+    const sheetUrl = `https://docs.google.com/spreadsheets/d/${ellipsis.env.OM_REQUEST_SHEET_ID}/edit#gid=0`
+    ellipsis.success(`Saved to your [Google Sheet](${sheetUrl})`);
   }
 });
 }
