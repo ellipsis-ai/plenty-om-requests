@@ -1,10 +1,13 @@
-function(description, ellipsis) {
+function(ellipsis) {
+  const checkContext = require('checkContext');
+
+if (checkContext(ellipsis)) {
   ellipsis.success("", {
-  next: {
-    actionName: "newRequest",
-    args: [
-      { name: "description", value: description }
-    ]
-  }
-});
+    next: {
+      actionName: "collectDescription"
+    }
+  });
+} else {
+  ellipsis.noResponse();
+}
 }
