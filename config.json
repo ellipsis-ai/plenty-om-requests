@@ -1,0 +1,8 @@
+{
+  "name" : "SF OM Requests",
+  "exportId" : "5XAZmvalREiC8DaxsojBUA",
+  "icon" : "🗄️",
+  "requiredAWSConfigs" : [ ],
+  "requiredOAuthApiConfigs" : [ ],
+  "requiredSimpleTokenApis" : [ ]
+}
