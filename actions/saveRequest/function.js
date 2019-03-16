@@ -37,7 +37,7 @@ client.authorize().then(() => {
     });
   } else {
     const sheetUrl = `https://docs.google.com/spreadsheets/d/${ellipsis.env.OM_REQUEST_SHEET_ID}/edit#gid=0`
-    ellipsis.success(`Saved to your [Google Sheet](${sheetUrl})`);
+    ellipsis.success(`OK. Saved to your [Google Sheet](${sheetUrl})`);
   }
 });
 }
