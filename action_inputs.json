@@ -30,12 +30,22 @@
   "isSavedForUser" : false
 }, {
   "exportId" : "diNCmHKAQDykIlNZ3TzQMQ",
-  "name" : "messageId",
+  "name" : "permalink",
   "paramType" : {
     "exportId" : "Text",
     "name" : "Text"
   },
   "question" : "What is the value for `messageId`?",
+  "isSavedForTeam" : false,
+  "isSavedForUser" : false
+}, {
+  "exportId" : "seo_40FfQsW-VZlWQKflmA",
+  "name" : "permalink",
+  "paramType" : {
+    "exportId" : "Text",
+    "name" : "Text"
+  },
+  "question" : "What is the value for `permalink`?",
   "isSavedForTeam" : false,
   "isSavedForUser" : false
 } ]

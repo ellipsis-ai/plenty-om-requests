@@ -3,11 +3,10 @@ function(ellipsis) {
 
 const msg = ellipsis.event.message;
 if (checkContext(ellipsis) && msg) {
-  ellipsis.success(`Adding a new request for \`${msg.text}\`…`, {
+  ellipsis.success(`Completing request for \`${msg.text}\`…`, {
     next: {
-      actionName: "newRequest",
+      actionName: "completeRequest",
       args: [
-        { name: "description", value: msg.text },
         { name: "permalink", value: msg.permalink || "" }
       ]
     }
